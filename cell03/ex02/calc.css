@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    margin-top: 50px;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.box button {
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'tahoma';
+}
+
+.box input {
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box select {
+    padding: 5px;
+    border-radius: 20px;
+}
