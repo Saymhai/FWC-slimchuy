@@ -1,0 +1,27 @@
+body {
+    display: grid;
+    justify-items: center;
+    font-family: tahoma;
+}
+
+.card {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.219);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.contact {
+    color: white;
+    background-color: black;
+    padding: 4px;
+    margin-top: 10px;
+}
