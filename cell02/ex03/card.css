@@ -24,4 +24,9 @@ body {
     background-color: black;
     padding: 4px;
     margin-top: 10px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
 }
