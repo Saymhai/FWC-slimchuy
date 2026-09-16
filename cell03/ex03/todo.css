@@ -14,7 +14,6 @@ button {
 #ft_lits {
     width: 100%;
     display: grid;
-    gap: 10px;
 }
 
 #ft_list .todo {
@@ -22,7 +21,7 @@ button {
     width: 450px;
     padding: 14px 18px;
     border-radius: 6px;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid #e279c8;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     cursor: pointer;
     word-break: break-word;
