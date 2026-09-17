@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwannee Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="profile.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+
+    <label for="nav-toggle" class="header-toggle">
+        <i class="bi bi-list icon-open"></i>
+        <i class="bi bi-x icon-close"></i>
+    </label>
+
+    <header id="header" class="header">
+        <div class="header-container">
+
+            <div class="back-home mb-3">
+                <a href="index.html" class="btnBack"><i class="bi bi-arrow-left"></i> Back</a>
+            </div>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#main"><i class="bi bi-house navicon"></i> Home</a></li>
+                    <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+                    <li><a href="#showcase"><i class="bi bi-code-slash navicon"></i> Showcase</a></li>
+                    <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="socialLinks mt-auto">
+                <a href="https://github.com" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            </div>
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+
+        <section id="main" class="section">
+            <div class="container">
+                <div class="infoBox">
+                    <h1 class="display-5 fw-bold">Hi, I'm <span class="accent-text">Suwannee</span></h1>
+                    <p style="font-size: 1.25rem; font-weight: 300; margin-top: 1rem; color: #595b5c;">Project Rush
+                        Portfolio</p>
+                    <div class="mt-4">
+                        <a href="#showcase" class="btnShowcase">showcase</a>
+                        <a href="#contact" class="btnContact">contact me!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="infoBox">
+                    <h2 class="sectionTitle">About Me</h2>
+                    <div class="row align-items-center mt-4">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <img src="pic/mhai.jpg" alt="Profile" class="profileImg">
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="fw-bold">Suwannee Limchuycharoen</h3>
+                            <p style="color: #c16062; font-weight: 700;">YOU CAN CALL ME MHAI</p>
+                            <p>
+                                <strong>Name: </strong>
+                                Suwannee Limchuycharoen
+                            </p>
+                            <p>
+                                <strong>DOB: </strong>
+                                26 August 2007
+                            </p>
+                            <p>
+                                <strong>Education: </strong>
+                                School of Information Technology, KMITL
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="section">
+            <div class="container">
+                <div class="infoBox">
+                    <h2 class="sectionTitle">Showcase</h2>
+                    <div class="row g-4 mt-2">
+                        <h4>Game Project<i class="bi bi-laptop fs-1"
+                                style="vertical-align: middle; color: #c16062; margin-left: 12px;"></i></h4>
+                        <div class="col-md-4">
+                            <div class="card h-100 showcase-card border-0 p-4">
+                                <div class="card-body">
+                                    <img src="pic/game1.jpg" alt="Profile" class="projectImg">
+                                    <h5 class="card-title fw-bold mt-3">Math wiht Ghosts</h5>
+                                    <p class="card-text text-muted">Math Project</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 showcase-card border-0 p-4">
+                                <div class="card-body">
+                                    <img src="pic/game2.jpg" alt="Profile" class="projectImg">
+                                    <h5 class="card-title fw-bold mt-3">Phawang</h5>
+                                    <p class="card-text text-muted">OOP Project</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 showcase-card border-0 p-4">
+                                <div class="card-body">
+                                    <img src="pic/game1.jpg" alt="Profile" class="projectImg">
+                                    <h5 class="card-title fw-bold mt-3">Phawang</h5>
+                                    <p class="card-text text-muted">OOP Project</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="infoBox">
+                    <h2 class="sectionTitle">Contact</h2>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <h5 class="fw-bold">ช่องทางการติดต่อ</h5>
+                            <p class="mt-3 mb-1"><i class="bi bi-envelope me-2" style="color: #c16062;"></i>
+                                68070194@kmitl.ac.th</p>
+                            <div class="social-contact-links mt-4">
+                                <a href="https://github.com/Saymhai/FWC-slimchuy" class="btnGithub"><i
+                                        class="bi bi-github"></i> GitHub</a>
+                                <a href="https://instagram.com/est11e_mh" class="btnIG"><i class="bi bi-instagram"></i>
+                                    Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

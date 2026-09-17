@@ -1,0 +1,293 @@
+/* เลื่อนหน้าจอแบบนุ่มนวล (Smooth Scroll) โดยไม่ต้องพึ่ง JS */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWRrcTZ4ang0cHRnZG9kMTFnaGhncmhqaTNjeTRsdGYxeHEzdTZuOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yld7nW3oQ2IyRubUm/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===================================================
+   Header & Navbar (Sidebar ตรึงซ้าย + สไตล์กระจกฝ้าเข้ม)
+   =================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    background: rgba(18, 20, 29, 0.85); /* กระจกฝ้าโทนมืด */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 30px 20px;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.btnBack {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.btnBack:hover {
+    color: #ffffff;
+}
+
+.btnShowcase {
+    display: inline-block;
+    background-color: #ff8688;
+    color: #ffffff;
+    border: 1px solid #ff8688;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1.5rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnContact {
+    display: inline-block;
+    background-color: transparent;
+    color: #212529;
+    border: 1px solid #212529;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* ลิงก์เมนู Navbar */
+.navmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navmenu li {
+    margin-bottom: 10px;
+}
+
+.navmenu a {
+    display: flex;
+    align-items: center;
+    color: #c2c5cc;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navmenu a .navicon {
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.navmenu a:hover {
+    color: #ffffff;
+    background-color: #ff8688;
+    transform: translateX(4px);
+}
+
+/* Social icons */
+.socialLinks a {
+    display: inline-block;
+    color: #adb5bd;
+    margin-right: 14px;
+    font-size: 1.3rem;
+    transition: 0.2s;
+}
+
+.socialLinks a:hover {
+    color: #ff8688;
+    transform: translateY(-2px);
+}
+
+/* ===================================================
+   Main Content Layout & Glass Card Effect
+   =================================================== */
+.main {
+    margin-left: 280px; /* เว้นพื้นที่ให้ Sidebar */
+}
+
+.section {
+    padding: 70px 0;
+    margin: 40px;
+}
+
+/* กล่องกระจกฝ้าสีขาว รองรับพื้นหลัง GIF ให้เด่นและอ่านง่าย */
+.infoBox {
+    background: rgba(255, 255, 255, 0.561);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.sectionTitle {
+    position: relative;
+    padding-bottom: 12px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #ff8688;
+}
+
+.profileImg {
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.projectImg {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
+}
+
+/* การ์ดในส่วน Showcase */
+.showcase-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+.btnGithub {
+    display: inline-block;
+    background-color: #212529;
+    color: #ffffff;
+    border: 1px solid #212529;
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnIG {
+    display: inline-block;
+    background-color: #ff8688;
+    color: #ffffff;
+    border: 1px solid #ff8688;
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* ===================================================
+   CSS Checkbox Hack สำหรับ Responsive บนมือถือ (No JS)
+   =================================================== */
+.nav-toggle-checkbox {
+    display: none;
+}
+
+.header-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+    color: #ffffff;
+    background-color: #ff8688;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-toggle .icon-close {
+    display: none;
+}
+
+.header-toggle .icon-open {
+    display: inline-block;
+}
+
+/* เมื่อหน้าจอเล็กลง (Responsive) */
+@media (max-width: 900px) {
+    .header-toggle {
+        display: block;
+    }
+
+    .header {
+        left: -280px;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .nav-toggle-checkbox:checked ~ .header {
+        left: 0;
+    }
+
+    .nav-toggle-checkbox:checked ~ .header-toggle .icon-open {
+        display: none;
+    }
+
+    .nav-toggle-checkbox:checked ~ .header-toggle .icon-close {
+        display: inline-block;
+    }
+
+    .glass-box {
+        padding: 25px 20px;
+    }
+}
