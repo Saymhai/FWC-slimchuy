@@ -6,9 +6,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWRrcTZ4ang0cHRnZG9kMTFnaGhncmhqaTNjeTRsdGYxeHEzdTZuOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yld7nW3oQ2IyRubUm/giphy.gif') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -171,10 +168,8 @@ body {
     width: 220px;
     height: 220px;
     max-width: 100%;
-    height: auto;
     object-fit: cover;
     border: 4px solid #ffffff;
-    object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -182,7 +177,6 @@ body {
 .projectImg {
     max-width: 100%;
     height: auto;
-    object-fit: cover;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.548);
@@ -282,7 +276,7 @@ body {
         display: inline-block;
     }
 
-    .InfoBox {
+    .infoBox {
         padding: 25px 20px;
     }
 
